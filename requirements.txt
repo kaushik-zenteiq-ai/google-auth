@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+authlib
+itsdangerous
+python-jose[cryptography]
+python-multipart
+requests
+alembic
+pydantic[email]
+starlette
