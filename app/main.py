@@ -81,6 +81,7 @@ async def health_check(db: Session = Depends(get_db)):
 @app.get("/auth/login", tags=["Authentication"])
 async def login(request: Request):
     """Initiate Google OAuth login"""
+    print(f"THIS IS THE REQUEST OF LOGIN{request}")
     return await auth.google_login(request)
 
 @app.get("/auth/callback", tags=["Authentication"])

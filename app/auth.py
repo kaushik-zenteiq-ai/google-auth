@@ -147,6 +147,9 @@ async def google_callback(request: Request, db: Session = Depends(get_db)) -> Re
         google_response = requests.get(user_info_endpoint, headers=headers)
         google_response.raise_for_status()
         user_info = google_response.json()
+        print(f"User info from Google: {type(user_info)}")
+                
+        print(f"User info from Google: {user_info.values()}")         
         
         # Extract user data from token
         user_data = token.get("userinfo", {})
